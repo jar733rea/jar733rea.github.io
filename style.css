@@ -1,0 +1,204 @@
+:root{--paper:#fff;--ink:#252525;--muted:#555;--teal:#CC0033;--line:#dde2e7}*{box-sizing:border-box}body{margin:0;background:white;color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}a{color:#CC0033;text-underline-offset:3px}a:hover{color:#8E0D18}a:focus-visible{outline:3px solid #a93b47;outline-offset:4px}.skip{position:absolute;top:-100px}.skip:focus{top:4px;background:#fff;z-index:10}header{background:#CC0033;min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 max(28px,calc((100vw - 1040px)/2));color:#fff}.brand{color:#fff;text-decoration:none;white-space:nowrap;font-size:18px;font-weight:600}.brand:hover{color:white}.brand span{display:none}nav{display:flex;align-items:stretch;flex-wrap:wrap;gap:0}nav a{color:#fff;text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:.35px;padding:23px 14px;white-space:nowrap}nav a:hover,nav a[aria-current]{color:white;background:#8E0D18}main{max-width:1040px;margin:auto;padding:44px 28px 70px;min-height:77vh}h1{font-size:36px;font-weight:400;color:#CC0033;line-height:1.25;margin:0 0 28px;letter-spacing:-.7px}h1 em{font-style:normal}h1 br{display:none}h1 br:after{content:' '}h2{font-size:25px;font-weight:400;line-height:1.3;color:#CC0033;margin:32px 0 15px}p{margin:0 0 18px}.intro{max-width:730px;font-size:17px}.profile-layout{display:grid;grid-template-columns:minmax(0,1fr) 218px;gap:64px}.biography p{max-width:700px}.biography strong{font-weight:400}.research-list{padding-left:21px;margin:0 0 30px}.research-list li{padding:5px 0}.profile-sidebar{padding-top:4px;font-size:14px}.portrait-placeholder{height:245px;background:#f6eeee;border:1px solid #e7d6d6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;color:#795252;font-size:12px}.initials{font:400 65px Georgia,serif;color:#CC0033}.profile-sidebar h2{font-size:20px;margin:22px 0 8px}.profile-sidebar p{margin-bottom:13px}.profile-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:22px 0}.sidebar-note{border-top:1px solid var(--line);padding-top:20px;color:#795252;font-size:13px}.eyebrow{font-size:11px;letter-spacing:1.5px;color:#795252;margin-bottom:15px}.project{border-top:1px solid var(--line);padding:24px 0;max-width:790px;scroll-margin-top:20px}.project h2{margin:10px 0 13px}.number{font-size:11px;color:#795252;letter-spacing:1px}.status,.note{font-size:13px;color:#687078}.projects{margin-top:36px}.note{margin-top:24px}.panel{border-top:1px solid var(--line);padding-top:5px;margin-top:32px;max-width:790px}.button{display:inline-block;padding:9px 15px;background:#CC0033;color:#fff;text-decoration:none;font-size:14px}.button:hover{color:#fff;background:#8E0D18}.contact{font-size:22px}footer{max-width:984px;margin:auto;border-top:1px solid var(--line);padding:22px 0 30px;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:#687078}@media(max-width:850px){header{padding:15px 24px 0;flex-direction:column;align-items:flex-start;gap:7px}nav a{padding:13px 12px}nav a:first-child{margin-left:-12px}.profile-layout{grid-template-columns:minmax(0,1fr) 190px;gap:30px}main{padding-top:32px}footer{margin:0 28px;flex-wrap:wrap}}@media(max-width:600px){.profile-layout{grid-template-columns:1fr;gap:30px}.profile-sidebar{border-top:1px solid var(--line);padding-top:26px}.portrait-placeholder{width:190px;height:215px}nav a{font-size:11px;padding:12px 9px}main{padding-left:24px;padding-right:24px}h1{font-size:32px}.contact{font-size:19px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+h3{font-size:17px;font-weight:500;color:#CC0033;margin-top:26px}.citations{max-width:810px;padding-left:23px}.citations li{margin-bottom:18px}main>p{max-width:810px}@media print{header,footer,.skip,.button{display:none}main{max-width:none;padding:0;font-size:11pt}h1{font-size:24pt}h2{break-after:avoid;font-size:17pt}h3{break-after:avoid}a{color:inherit;text-decoration:none}.project{max-width:none}.citations{max-width:none}.note{font-size:9pt}}
+
+header{justify-content:flex-end}
+
+.profile-sidebar .sidebar-email{margin-top:22px;color:var(--ink)}
+
+.profile-links{flex-direction:row;align-items:center;gap:15px;flex-wrap:nowrap}.profile-links a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:40px;text-decoration:none;color:#666;flex-shrink:0}.profile-links svg{display:block;width:26px;height:26px;fill:currentColor}.profile-links a:hover{color:#CC0033}
+
+nav .home-link svg{display:inline-block;vertical-align:middle}
+
+/* Slightly larger navigation labels and home icon. */
+nav a{font-size:14px}
+nav .home-link svg{width:22px;height:22px}
+@media(max-width:600px){nav a{font-size:12px}nav .home-link svg{width:20px;height:20px}}
+
+/* Keep navigation visible while scrolling, with space for anchor targets. */
+header{position:sticky;top:0;z-index:100}
+html{scroll-padding-top:100px}
+.project{scroll-margin-top:100px}
+@media(max-width:600px){html{scroll-padding-top:140px}.project{scroll-margin-top:140px}}
+
+/* Full-width dark footer with more readable text. */
+footer{max-width:none;margin:0;background:#000;color:#fff;border-top:0;font-size:13px;padding:26px max(28px,calc((100vw - 984px)/2)) 30px;flex-wrap:wrap}
+footer a,footer a:hover{color:#fff}
+
+.profile-portrait{display:block;width:100%;height:auto;border-radius:2px}
+@media(max-width:600px){.profile-portrait{max-width:240px}}
+
+header{justify-content:space-between}.rutgers-logo{display:flex;align-items:center;background:#fff;padding:5px 12px;margin:8px 0;flex-shrink:0}.rutgers-logo img{display:block;width:152px;height:auto}@media(max-width:850px){header{flex-direction:row;align-items:center;flex-wrap:wrap;padding-top:0}.rutgers-logo img{width:125px}}
+
+/* White navigation bar with black labels. */
+header{background:#fff;color:#000;border-bottom:1px solid #e5e5e5}
+nav a{color:#000}
+nav a:hover,nav a[aria-current]{color:#000;background:#f1f1f1}
+
+/* Content links use scarlet only on interaction. */
+main a:not(.button){color:var(--ink)}
+main a:not(.button):hover,main a:not(.button):focus-visible{color:#CC0033}
+main .profile-links a{color:#666}
+
+nav a:hover,nav a:focus-visible,nav a[aria-current="page"]{color:#CC0033}
+
+/* Fit five profile icons neatly within the sidebar. */
+.profile-links{gap:5px}.profile-links a{width:36px}
+
+/* Indicate the current page with a scarlet underline. */
+nav a{position:relative}
+nav a:hover,nav a:focus-visible,nav a[aria-current="page"]{background:transparent}
+nav a[aria-current="page"]::after{content:"";position:absolute;left:14px;right:14px;bottom:10px;height:3px;background:#CC0033}
+
+/* Bold black page titles and section headings. */
+h1,h2,h3,h4,h5,h6{color:#000;font-weight:700}
+
+/* Blue links in the About introduction. */
+main .biography > p a{color:#004080}
+main .biography > p a:hover,main .biography > p a:focus-visible{color:#CC0033}
+
+main .biography .research-list a{color:#004080}
+main .biography .research-list a:hover,main .biography .research-list a:focus-visible{color:#CC0033}
+
+/* CV-style education and appointment entries on Bio. */
+.bio-cv-section{margin:34px 0}
+.bio-cv-section h2{text-transform:uppercase;font-size:24px}
+.bio-education,.bio-appointments{margin:24px 0 0 10%}
+.bio-education p{margin-bottom:12px}
+.bio-appointments>div{display:grid;grid-template-columns:155px minmax(0,1fr);gap:25px;margin-bottom:20px}
+.bio-appointments dt,.bio-appointments dd{margin:0;font-weight:400}
+@media(max-width:600px){.bio-education,.bio-appointments{margin-left:0}.bio-appointments>div{grid-template-columns:1fr;gap:5px}.bio-appointments dt{font-weight:600}.bio-cv-section h2{font-size:21px}}
+
+.bio-cv-section h2{text-transform:none}
+main .bio-page a{color:#004080}
+main .bio-page a:hover,main .bio-page a:focus-visible{color:#CC0033}
+
+.bio-education,.bio-appointments{margin-left:0;text-align:left}
+
+.bio-education{padding-left:23px;line-height:1.25}.bio-education li{margin-bottom:8px}
+
+.profile-layout>.page-content{min-width:0}.page-content .citations,.page-content .project,.page-content p{max-width:100%}
+
+.featured-list{list-style:none;padding:0;margin:22px 0}.featured-list>li{padding:16px 0;border-bottom:1px solid #e5e5e5}.featured-list p{margin:7px 0 0}.featured-list a,.featured-activities>p a{color:#004080}.featured-list a:hover,.featured-activities>p a:hover{color:#CC0033}
+
+/* Dated activity updates inspired by the supplied reference. */
+.activity-entry{background:#f3f3f3;border-left:4px solid #004080;padding:16px 18px;margin:0 0 16px}
+.activity-entry p{margin:0;line-height:1.65}
+.activity-date{font-weight:700;color:#555}
+main .activity-entry a{color:#004080}
+main .activity-entry a:hover,main .activity-entry a:focus-visible{color:#CC0033}
+
+.footer-disclaimer{display:block;flex-basis:100%;font-style:italic}footer{row-gap:8px}
+
+/* Distinguish activity dates from update text. */
+.activity-entry .activity-date{color:#CC0033;font-weight:700}
+
+.activity-entry .activity-date{color:#004080;font-weight:700}
+
+/* Scarlet accents for activity dates and entry borders. */
+.activity-entry{border-left-color:#CC0033}
+.activity-entry .activity-date{color:#CC0033;font-weight:700}
+
+.activity-entry .activity-date{color:#000;font-weight:700}
+
+.footer-disclaimer{flex-basis:auto;margin-left:auto;text-align:right}
+
+.activity-photo{margin:18px 0 0}.activity-photo img{display:block;width:100%;height:auto}.activity-photo figcaption{font-size:12px;line-height:1.5;color:#555;margin-top:8px}
+
+.activity-photo{margin:0 0 24px}
+
+.asbpa-photo img{max-width:480px;margin:0 auto}.asbpa-photo figcaption a{color:#004080}
+
+.asbpa-photo img{width:100%;max-width:none;aspect-ratio:2500 / 1457;height:auto;object-fit:cover;object-position:50% 35%}
+
+/* Preserve the original Activities column width without the sidebar. */
+.activities-layout{display:grid;grid-template-columns:minmax(0,1fr) 218px;gap:64px}
+.activities-layout>.page-content{min-width:0}
+@media(max-width:850px){.activities-layout{grid-template-columns:minmax(0,1fr) 190px;gap:30px}}
+@media(max-width:600px){.activities-layout{grid-template-columns:1fr;gap:30px}}
+
+/* Consistent Bio body and list spacing. */
+.bio-page,.bio-page p,.bio-page ul,.bio-page li{line-height:1.25}
+
+/* Restore the Bio introduction to the standard paragraph spacing. */
+.bio-page>p:first-of-type{line-height:1.65}
+
+/* Site-wide typography. */
+body{font-family:"Source Sans 3",Arial,Helvetica,sans-serif}
+
+/* Contact page: a clear email invitation and compact office details. */
+.contact-page .intro{margin-bottom:28px}
+.contact-email{background:#f3f3f3;border-left:4px solid #CC0033;padding:22px 24px;margin:0 0 30px}
+.contact-email h2{margin:0 0 12px;font-size:23px}
+.contact-email p{margin-bottom:14px}
+.contact-email .contact{color:#004080;font-size:22px;overflow-wrap:anywhere}
+.contact-email .contact:hover{color:#CC0033}
+.contact-office h2{margin-top:0}
+.contact-office .office-location{font-weight:600;margin-bottom:6px}
+.contact-office address{font-style:normal;margin-bottom:18px}
+.contact-office .office-affiliation{color:#555;font-size:14px}
+@media(max-width:600px){.contact-email{padding:18px}.contact-email .contact{font-size:20px}}
+
+.bio-page .bio-cv-link{margin-top:40px}
+
+.featured-activities>p:last-child{margin-top:40px}
+
+/* Publication titles, authors, and status on distinct lines. */
+.publication-entry{margin:0 0 15px}
+.publication-entry h3{font-size:17px;line-height:1.35;font-weight:600;margin:0 0 8px;color:#000}
+.publication-entry p{margin:0 0 5px;line-height:1.5}
+.publication-entry .publication-authors{color:#737373}
+.publication-self{color:#004080}
+.publication-entry .publication-status{color:#252525}
+.publication-entry .publication-detail{color:#737373;font-size:14px}
+
+/* Separate publication labels from the aligned citation information. */
+.publication-entry{display:grid;grid-template-columns:38px minmax(0,1fr);column-gap:16px;align-items:start}
+.publication-entry>.publication-number{font-size:18px;font-weight:600;line-height:1.35;color:#000}
+@media(max-width:600px){.publication-entry{grid-template-columns:32px minmax(0,1fr);column-gap:10px}}
+
+.publication-entry .publication-link{margin-top:10px;font-size:14px}.publication-link a{color:#004080}.publication-link a:hover{color:#CC0033}
+
+.publication-entry h3 a.publication-title-link{color:inherit;text-decoration:none}.publication-entry h3 a.publication-title-link:hover{color:#CC0033;text-decoration:none}
+
+/* Compact spacing within each publication entry. */
+.publication-entry h3{line-height:1.25;margin-bottom:4px}
+.publication-entry p{line-height:1.25;margin-bottom:3px}
+.publication-entry>.publication-number{line-height:1.25}
+
+/* Center the shared navigation without a logo. */
+header{justify-content:center;gap:0}
+header nav{justify-content:center;margin-inline:auto}
+header nav a:first-child{margin-left:0}
+@media(max-width:850px){header{justify-content:center;padding:0 16px}}
+
+/* Align shared navigation with the main content column. */
+header{justify-content:flex-start;padding:0 max(28px,calc((100vw - 1040px)/2 + 28px))}
+header nav{justify-content:flex-start;margin:0}
+header nav a:first-child{margin-left:0;padding-left:0}
+@media(max-width:850px){header{justify-content:flex-start;padding:0 28px}}
+@media(max-width:600px){header{padding:0 24px}}
+
+/* Larger shared navigation labels. */
+header nav a{font-size:18px}
+header nav .home-link svg{width:24px;height:24px}
+@media(max-width:600px){header nav a{font-size:15px}}
+
+/* Align the active home underline with the icon itself. */
+header nav .home-link[aria-current="page"]::after{left:0;right:auto;width:24px}
+
+.bio-page .bio-personal-note p{line-height:1.65}
+
+/* Scarlet navigation with white labels and active indicators. */
+header{background:#CC0033;color:#fff;border-bottom-color:#CC0033}
+header nav a,header nav a:hover,header nav a[aria-current="page"]{color:#fff;background:transparent}
+header nav a[aria-current="page"]::after{background:#fff}
+header nav a:focus-visible{outline-color:#fff}
+
+.publication-status a.conference-event-link{color:#004080;text-decoration:none}.publication-status a.conference-event-link:hover{color:#CC0033}
+
+.contact-office address.contact-address{font-size:16px;font-style:normal;line-height:1.65;color:var(--ink);margin:0}
+
+/* Slightly tighter gaps on the Activities timeline. */
+.activities-layout .activity-entry{margin-bottom:10px}
+
+.featured-cards .activity-entry{margin-bottom:10px}
