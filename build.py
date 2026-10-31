@@ -84,6 +84,7 @@ shutil.copy(root/'style.css',out/'style.css')
 for asset in ('asbpa-2026-presentation.jpeg', 'asbpa-2026-poster.png'):
  shutil.copy(root/'assets'/asset, out/'assets'/asset)
 shutil.copy(root/'assets/sparc-2026-participants.jpeg', out/'assets/sparc-2026-participants.jpeg')
+shutil.copy(root/'assets/structures-congress-2026-boston.jpg', out/'assets/structures-congress-2026-boston.jpg')
 shutil.copy(root/'assets/rutgers-logo.svg', out/'assets/rutgers-logo.svg')
 shutil.copy(root/'assets/juan-headshot.png', out/'assets/juan-headshot.png')
 shutil.copy(root/'assets/Juan-Rea-Avila-CV.pdf', out/'assets/Juan-Rea-Avila-CV.pdf')
