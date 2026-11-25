@@ -202,3 +202,77 @@ header nav a:focus-visible{outline-color:#fff}
 .activities-layout .activity-entry{margin-bottom:10px}
 
 .featured-cards .activity-entry{margin-bottom:10px}
+
+/* Trim the collage's outer white margins while retaining every portrait. */
+.leadership-photo-frame{position:relative;overflow:hidden;aspect-ratio:1328/720}
+.activity-photo .leadership-photo-frame img{position:absolute;width:104.21687%;max-width:none;height:auto;left:-2.10843%;top:-3.88889%}
+
+/* A gentle dotted wave above the footer text. */
+footer{position:relative;isolation:isolate;overflow:hidden;padding-top:132px}
+.footer-wave{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
+footer>span{position:relative;z-index:1}
+.footer-motion-toggle{position:absolute;right:max(28px,calc((100vw - 984px)/2));top:99px;border:1px solid #666;border-radius:3px;padding:4px 9px;background:#000;color:#ddd;font:inherit;font-size:11px;cursor:pointer}
+.footer-motion-toggle:hover{border-color:#fff;color:#fff}
+.footer-motion-toggle:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.footer-motion-toggle[hidden]{display:none}
+@media(max-width:600px){footer{padding-top:132px}.footer-disclaimer{margin-left:0;text-align:left;flex-basis:100%}.footer-motion-toggle{right:24px}}
+
+.footer-wave:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+
+/* Let the dot field and click disturbances cover the entire footer. */
+footer,footer *{cursor:url("assets/footer-cursor.svg") 12 12,crosshair}
+.footer-wave-word{display:inline-block;background:rgba(0,0,0,.6);border-radius:2px}
+@media(prefers-reduced-motion:reduce){.footer-wave-word{transform:none!important}}
+
+.footer-wave-hint{position:absolute;left:max(28px,calc((100vw - 984px)/2));top:101px;margin:0;color:#aaa;font-size:11px;line-height:1.5;pointer-events:none;background:rgba(0,0,0,.75)}
+@media(max-width:600px){.footer-wave-hint{top:77px;left:28px}}
+
+/* Phone and tablet layouts; retain the desktop presentation. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media(max-width:850px){.activities-layout{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){
+ .profile-layout{grid-template-columns:minmax(0,1fr);gap:26px}
+ .profile-sidebar{grid-row:1;display:grid;grid-template-columns:92px minmax(0,1fr);gap:8px 16px;align-items:center;border-top:0;border-bottom:1px solid var(--line);padding:0 0 18px}
+ .profile-sidebar .profile-portrait{width:92px;max-width:92px;height:auto;grid-column:1;grid-row:1}
+ .profile-sidebar .sidebar-email{grid-column:2;grid-row:1;margin:0;font-size:15px;overflow-wrap:anywhere}
+ .profile-sidebar .profile-links{grid-column:1/-1;margin:4px 0 0;gap:8px;flex-wrap:wrap}
+ .profile-sidebar .profile-links a{width:44px;height:44px}
+ .profile-sidebar .profile-links svg{width:26px;height:26px}
+}
+@media(max-width:600px){
+ header{padding:0 12px;min-height:56px}
+ header nav{display:grid;grid-template-columns:40px .65fr 1.4fr 1.2fr 1.05fr;width:100%;min-width:0;align-items:stretch}
+ header nav a,header nav a:first-child{display:flex;align-items:center;justify-content:center;min-height:56px;margin:0;padding:12px 3px;font-size:clamp(11px,3.2vw,14px);letter-spacing:0}
+ header nav .home-link svg{width:22px;height:22px}
+ header nav a[aria-current="page"]::after{left:6px;right:6px;bottom:7px}
+ header nav .home-link[aria-current="page"]::after{left:9px;width:22px}
+ html{scroll-padding-top:72px}
+ .project{scroll-margin-top:72px}
+ main{padding:26px 20px 40px;min-height:70vh}
+ h1{font-size:30px;margin-bottom:22px}
+ h2{font-size:23px;margin-top:28px}
+ .biography,.page-content,.publication-information{min-width:0;overflow-wrap:break-word}
+ .bio-page,.bio-page p,.bio-page ul,.bio-page li{line-height:1.55}
+ .bio-education{padding-left:20px;margin-top:16px}
+ .bio-education li{margin-bottom:12px}
+ .publication-entry{grid-template-columns:30px minmax(0,1fr);column-gap:8px;margin-bottom:24px}
+ .publication-entry h3{font-size:17px;line-height:1.4;margin-bottom:7px}
+ .publication-entry p{line-height:1.5;margin-bottom:5px}
+ .publication-entry>.publication-number{font-size:16px;line-height:1.5}
+ .activity-entry{padding:14px 14px}
+ .activity-photo figcaption{font-size:13px;line-height:1.5}
+ .contact-email{padding:18px}
+ .contact-office address.contact-address{line-height:1.6}
+ .button{min-height:44px;padding:10px 14px}
+ object[type="application/pdf"]{height:65vh;min-height:360px}
+ footer{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:64px 20px 22px;font-size:12px;line-height:1.5}
+ .footer-wave-hint{position:relative;inset:auto;order:1;font-size:12px;line-height:1.5;margin:0;max-width:100%}
+ .footer-motion-toggle{position:relative;inset:auto;order:2;min-height:44px;padding:9px 12px;font-size:13px;touch-action:manipulation;margin-bottom:4px}
+ footer>span{order:3;max-width:100%}
+ footer>.footer-disclaimer{order:4;flex-basis:auto;margin:0;text-align:left}
+}
+@media(hover:none){footer,footer *{cursor:auto}}
+
+/* Give the footer notes more separation from the interaction controls. */
+@media(min-width:601px){footer{padding-top:150px;padding-bottom:24px}}
+@media(max-width:600px){footer>.footer-motion-toggle{margin-bottom:16px}footer{padding-bottom:20px}}
